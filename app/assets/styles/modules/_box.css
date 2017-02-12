@@ -1,0 +1,38 @@
+.box-container {
+    background-color: yellow;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    &__L1L2 {
+        background-color: lightblue;
+    }
+
+    .box {
+        display: flex;
+        flex-flow: column;
+        border: 3px solid black;
+        padding: 1rem;
+        margin: .25rem;
+        border-radius: 20px;
+        box-shadow: 5px 5px 2px #888;
+        text-align: center;
+        vertical-align: top;
+
+        &.tech {
+            background-color: limegreen;
+        }
+        &.L1 {
+            background-color: lightpink;
+            color: #444;
+        }
+    }
+
+    h1 {
+        margin: .1rem;
+    }
+    p {
+        margin: .2rem;
+    }
+}

@@ -1,6 +1,30 @@
+/* Eigene Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 90%;
+
+    @mixin atSmall {
+        font-size: 95%;
+    }
+    @mixin atMedium {
+        font-size: 100%;
+    }
+    @mixin atLarge {
+        font-size: 120%;
+    }
+    @mixin atExtraLarge {
+        font-size: 150%;
+    }
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background: $mainBackground;
+    width: 100%;
 }
 
 img {
@@ -8,10 +32,7 @@ img {
     height: auto;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 a {
-    color: $mainOrange;
+    color: $kpcBlau;
 }
