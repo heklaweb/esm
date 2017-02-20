@@ -1,20 +1,19 @@
 .site-content {
-    margin-left: .5rem;
-    margin-right: .5rem;
-    /*border: 1px solid; /**/
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     margin-bottom: 3rem;
 
     @mixin atMedium {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        margin-top: 4.5rem;
     }
+
     @mixin atLarge {
         margin-top: 5rem;
     }
 
-    h4 {
-        margin-top: 0;
-        margin-bottom: .2rem;
+    @mixin atExtraLarge {
+        margin-top: 6rem;
     }
+
 }

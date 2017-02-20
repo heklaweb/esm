@@ -467,42 +467,39 @@ template {
     box-sizing: border-box;
 }
 
-html, body {
+body {
+    font-family: 'Arial', sans-serif;
+    background: #a9d0f5;
+    width: 100%;
     font-size: 90%;
 }
 
 @media (min-width: 530px) {
 
-  html, body {
-    font-size: 95%;
+  body {
+    font-size: 100%;
   }
 }
 
 @media (min-width: 769px) {
 
-  html, body {
-    font-size: 100%;
+  body {
+    font-size: 120%;
   }
 }
 
 @media (min-width: 1025px) {
 
-  html, body {
-    font-size: 120%;
+  body {
+    font-size: 150%;
   }
 }
 
 @media (min-width: 1600px) {
 
-  html, body {
-    font-size: 150%;
+  body {
+    font-size: 200%;
   }
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: #ececec;
-    width: 100%;
 }
 
 img {
@@ -529,18 +526,17 @@ a {
 }
 
 .site-content {
-    margin-left: .5rem;
-    margin-right: .5rem;
-    /*border: 1px solid; /**/
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     margin-bottom: 3rem;
+
 }
 
 @media (min-width: 769px) {
 
   .site-content {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-top: 4.5rem;
   }
 }
 
@@ -551,9 +547,11 @@ a {
   }
 }
 
-.site-content h4 {
-  margin-top: 0;
-  margin-bottom: .2rem;
+@media (min-width: 1600px) {
+
+  .site-content {
+    margin-top: 6rem;
+  }
 }
 
 .site-footer {
@@ -611,57 +609,103 @@ a {
   }
 }
 
-.box-container {
-    background-color: yellow;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 1rem;
+.container {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
-.box-container__L1L2 {
-  background-color: lightblue;
+.container h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: .2rem;
+  padding-top: .2rem;
 }
 
-.box-container .box {
+.container h4 {
+  margin-top: 0;
+  margin-bottom: .1rem;
+}
+
+.container p {
+  margin: 0;
+}
+
+.container--techniker {
+  background-color: #8aeba1;
+}
+
+.container--level1 {
+  background-color: #00ffe0;
+}
+
+.container--level2 {
+  background-color:#59eb59;
+}
+
+.container--boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  border: 3px solid black;
-  padding: 1rem;
-  margin: .25rem;
-  border-radius: 20px;
-  box-shadow: 5px 5px 2px #888;
-  text-align: center;
-  vertical-align: top;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px dotted #000;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin: 0;
 }
 
-.box-container .box.tech {
-  background-color: limegreen;
+.container--boxes .box {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px 3px #aaa;
 }
 
-.box-container .box.L1 {
-  background-color: lightpink;
-  color: #444;
+.container--boxes .box.Anfahrt {
+  background-color: #bdbdbd;
 }
 
-.box-container h1 {
-  margin: .1rem;
+.container--boxes .box.Abfahrt {
+  background-color: #6e6e6e;
 }
 
-.box-container p {
-  margin: .2rem;
+.container--boxes .box.frei {
+  background-color: #32cd32;
+}
+
+.container--boxes .box.abw {
+  background-color: #69f;
+}
+
+.container--boxes .box.abw-No-Tel {
+  background-color: red;
+  color: white;
+}
+
+.container--boxes .box.Call {
+  background-color: #ff0;
+}
+
+.container--boxes .box.Call-No-Tel {
+  background-color: rgb(170,0,62);
+  color: white;
+}
+
+.container--boxes .box.Urlaub-krank {
+  background-color: white;
+}
+
+.container--boxes .box.L1 {
+  background-color: #32a5d1;
+}
+
+.container--boxes .box.L2 {
+  background-color: #aef387;
 }
 
 /*

@@ -4,27 +4,25 @@
 * {
     box-sizing: border-box;
 }
-html, body {
-    font-size: 90%;
-
-    @mixin atSmall {
-        font-size: 95%;
-    }
-    @mixin atMedium {
-        font-size: 100%;
-    }
-    @mixin atLarge {
-        font-size: 120%;
-    }
-    @mixin atExtraLarge {
-        font-size: 150%;
-    }
-}
 
 body {
     font-family: 'Arial', sans-serif;
     background: $mainBackground;
     width: 100%;
+    font-size: 90%;
+
+    @mixin atSmall {
+        font-size: 100%;
+    }
+    @mixin atMedium {
+        font-size: 120%;
+    }
+    @mixin atLarge {
+        font-size: 150%;
+    }
+    @mixin atExtraLarge {
+        font-size: 200%;
+    }
 }
 
 img {

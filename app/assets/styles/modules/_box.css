@@ -1,38 +1,95 @@
-.box-container {
-    background-color: yellow;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 1rem;
+.container {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 
-    &__L1L2 {
-        background-color: lightblue;
+    h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: .2rem;
+        padding-top: .2rem;
     }
 
-    .box {
-        display: flex;
-        flex-flow: column;
-        border: 3px solid black;
-        padding: 1rem;
-        margin: .25rem;
-        border-radius: 20px;
-        box-shadow: 5px 5px 2px #888;
-        text-align: center;
-        vertical-align: top;
-
-        &.tech {
-            background-color: limegreen;
-        }
-        &.L1 {
-            background-color: lightpink;
-            color: #444;
-        }
+    h4 {
+        margin-top: 0;
+        margin-bottom: .1rem;
     }
 
-    h1 {
-        margin: .1rem;
-    }
     p {
-        margin: .2rem;
+        margin: 0;
+    }
+
+    &--techniker {
+        background-color: #8aeba1;
+    }
+
+    &--level1 {
+        background-color: #00ffe0;
+    }
+
+    &--level2 {
+        background-color:#59eb59;
+    }
+
+    &--boxes {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px dotted #000;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        margin: 0;
+
+        .box {
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 3px 3px #aaa;
+
+            &.Anfahrt {
+                background-color: #bdbdbd;
+            }
+
+            &.Abfahrt {
+                background-color: #6e6e6e;
+            }
+
+            &.frei {
+                background-color: #32cd32;
+            }
+
+            &.abw {
+                background-color: #69f;
+            }
+
+            &.abw-No-Tel {
+                background-color: red;
+                color: white;
+            }
+
+            &.Call {
+                background-color: #ff0;
+            }
+
+            &.Call-No-Tel {
+                background-color: $kpcRot;
+                color: white;
+            }
+
+            &.Urlaub-krank {
+                background-color: white;
+            }
+
+            &.L1 {
+                background-color: #32a5d1;
+            }
+
+            &.L2 {
+                background-color: #aef387;
+            }
+        }
     }
 }
