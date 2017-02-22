@@ -119,7 +119,7 @@
     "id": "ID19",
     "name": "Laura",
     "vorname": "Rice",
-    "bemerkung": "Weiß nicht, was er mit all seiner vielen Zeit anfangen soll und langweilt sich beinahe zu tode"
+    "bemerkung": "Weiß nicht, was er mit all seiner vielen Zeit anfangen soll und langweilt sich beinahe zu Tode ..."
   }, {
     "kategorie": "L2",
     "id": "ID20",
@@ -146,12 +146,12 @@
   }, {
     "kategorie": "LE",
     "class": "abw-No-Tel",
-    "id": "abwesend, keine Telefonate",
+    "id": "Abwesend, keine Telefonate",
     "bemerkung": "Techniker ist abwesend und möchte KEINE Telefonate"
   }, {
     "kategorie": "LE",
     "class": "abw",
-    "id": "abwesend",
+    "id": "Abwesend",
     "bemerkung": "Techniker ist abwesend, kann aber telefonieren"
   }, {
     "kategorie": "LE",

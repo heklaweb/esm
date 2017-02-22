@@ -3,15 +3,15 @@
 
 $mainBackground: #a9d0f5;
 $kpcRot: rgb(170,0,62);
-$kpcBlau: #002440;
+$kpcBlau: rgb(0,40,72);
 $kpcRotDark: rgb(140,0,62);
-$kpcBlau1: RGB(17, 71, 106); /* K&P Blau 1 */
-$kpcBlau2: RGB(73, 107, 141); /* K&P Blau 2 */
-$kpcBlau3: RGB(128, 150, 178); /* K&P Blau 3 */
-$kpcBlau4: RGB(189, 199, 217); /* K&P Blau 4 */
-$kpcBlau5: RGB(220, 226, 236); /* K&P Blau 5 */
+$kpcBlau1: rgb(17, 71, 106); /* K&P Blau 1 */
+$kpcBlau2: rgb(73, 107, 141); /* K&P Blau 2 */
+$kpcBlau3: rgb(128, 150, 178); /* K&P Blau 3 */
+$kpcBlau4: rgb(189, 199, 217); /* K&P Blau 4 */
+$kpcBlau5: rgb(220, 226, 236); /* K&P Blau 5 */
 
-$transparentBG: rgba(255, 255, 255, .6);
+/*$transparentBG: rgba(255, 255, 255, .6);*/
 
 /* Farben für die Boxen
    ========================================================================== */
@@ -21,8 +21,8 @@ $Abfahrt: #6e6e6e;
 $frei: #32cd32;
 $abw: #69f;
 $abw-No-Tel: red;
-$Call: #ff0;
-$Call-No-Tel $kpcRot;
+$Call: yellow;
+$Call-No-Tel: $kpcRot;
 $Urlaub-krank: white;
 
 $L1: #32a5d1;

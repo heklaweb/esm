@@ -114,7 +114,8 @@ var ProcessData = function () {
                     }
                 } else {
                     switch (kategorie) {
-                        case ('TE', 'LE'):
+                        case 'TE':
+                        case 'LE':
                             subclass = ' Urlaub-krank';
                             break;
                         case 'L1':
@@ -126,9 +127,9 @@ var ProcessData = function () {
                     }
                 }
 
-                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>' + '<p>' +
-                // name + ' ' + vorname + '<br>' +
-                bemerkung + '</p>';
+                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>' + '<p>'
+                // + name + ' ' + vorname + '<br>'
+                + bemerkung + '</p>';
 
                 htmlString += '</div>';
 

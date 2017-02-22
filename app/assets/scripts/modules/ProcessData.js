@@ -1,8 +1,7 @@
 // import $ from 'jquery';
 
 class ProcessData {
-    constructor() {
-    }
+    constructor() {}
 
     renderData(data) {
         // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
@@ -28,7 +27,8 @@ class ProcessData {
                 }
             } else {
                 switch (kategorie) {
-                    case 'TE', 'LE':
+                    case 'TE':
+                    case 'LE':
                         subclass = ' Urlaub-krank';
                         break;
                     case 'L1':
@@ -40,12 +40,12 @@ class ProcessData {
                 }
             }
 
-            htmlString += '<div class="box' + subclass + '">' +
-                '<h4>' + id + '</h4>' +
-                '<p>' +
-                // name + ' ' + vorname + '<br>' +
-                bemerkung +
-                '</p>';
+            htmlString += '<div class="box' + subclass + '">'
+                + '<h4>' + id + '</h4>'
+                + '<p>'
+                // + name + ' ' + vorname + '<br>'
+                + bemerkung
+                + '</p>';
 
             htmlString += '</div>';
 

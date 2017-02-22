@@ -638,7 +638,11 @@ a {
 .container--legende {
   background-color: lightseagreen;
   margin-top: 3rem;
-  font-size: .9em;
+  font-size: .7em;
+}
+
+.container--legende .container--boxes .box {
+  width: 40em;
 }
 
 .container--boxes {
@@ -662,13 +666,9 @@ a {
     max-width: 20em;
 }
 
-/* einkommentieren, falls die Boxen gleich breit sein sollen */
-
 .container--boxes .box.frei {
   background-color: #32cd32;
 }
-
-/* min-width: 20em; */
 
 .container--boxes .box.abw {
   background-color: #69f;
@@ -708,9 +708,9 @@ a {
   background-color: #aef387;
 }
 
-.container--legende .container--boxes .box  {
-    min-width: 20em;
-}
+/*.container--legende .container--boxes .box  {
+    width: 20em;
+}*/
 
 /*
 @import "modules/_wrapper";

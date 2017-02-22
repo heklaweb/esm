@@ -27,7 +27,9 @@
         /*background-color: $kpcBlau3;*/
     }
     &--legende {
-        background-color: white;
+        background-color: lightseagreen;
+        margin-top: 3rem;
+        font-size: .9em;
     }
 }
 
@@ -39,43 +41,57 @@
     padding-bottom: .3em;
     margin: 0;
 }
-
 .container--boxes .box {
     margin: .4em;
     padding: .4em;
+    border: 1px solid #333;
     border-radius: 10px;
     box-shadow: 4px 4px 3px 3px #aaa;
     max-width: 20em;
-    &.Anfahrt {
-        background-color: $Anfahrt;
-    }
-    &.Abfahrt {
-        background-color: $Abfahrt;
-    }
+    /* min-width: 20em; */ /* einkommentieren, falls die Boxen gleich breit sein sollen */
     &.frei {
         background-color: $frei;
     }
+
     &.abw {
         background-color: $abw;
     }
+
     &.abw-No-Tel {
         background-color: $abw-No-Tel;
         color: white;
     }
+
     &.Call {
         background-color: $Call;
     }
+
     &.Call-No-Tel {
         background-color: $Call-No-Tel;
         color: white;
     }
+
     &.Urlaub-krank {
         background-color: $Urlaub-krank;
     }
+
+    &.Anfahrt {
+        background-color: $Anfahrt;
+    }
+
+    &.Abfahrt {
+        background-color: $Abfahrt;
+    }
+
     &.L1 {
         background-color: $L1;
     }
+
     &.L2 {
         background-color: $L2;
     }
+}
+
+.container--legende .container--boxes .box  {
+    min-width: 20em;
 }
