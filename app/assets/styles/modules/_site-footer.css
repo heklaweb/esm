@@ -4,14 +4,14 @@
     color: #FFF;
     text-align: center;
     background-color: $kpcBlau;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: .25rem;
-    /* border: 1px solid red; */
+    /*opacity: .6;*/
+    /*border: 1px solid #000;*/
 
     @mixin atMedium {
-        padding: .5rem;
         font-size: 1rem;
     }
 

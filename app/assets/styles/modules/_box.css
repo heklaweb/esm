@@ -1,96 +1,81 @@
 .container {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    margin-right: .5rem;
-    margin-left: .5rem;
-
+    margin: .5rem;
+    ;
     h3 {
         margin-top: 0;
         margin-bottom: 0;
         padding-left: .2rem;
         padding-top: .2rem;
     }
-
     h4 {
         margin-top: 0;
         margin-bottom: .1rem;
     }
-
     p {
         margin: 0;
     }
-
     &--techniker {
         background-color: #8aeba1;
         /*background-color: $kpcBlau1;*/
     }
-
     &--level1 {
         background-color: #00ffe0;
         /*background-color: $kpcBlau2;*/
     }
-
     &--level2 {
-        background-color:#59eb59;
+        background-color: #59eb59;
         /*background-color: $kpcBlau3;*/
     }
+    &--legende {
+        background-color: white;
+    }
+}
 
-    &--boxes {
-        display: flex;
-        flex-wrap: wrap;
-        border: 1px dotted #000;
-        padding-right: .5em;
-        padding-bottom: .3em;
-        margin: 0;
+.container--boxes {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dotted #000;
+    padding-right: .5em;
+    padding-bottom: .3em;
+    margin: 0;
+}
 
-        .box {
-            margin: .4em;
-            padding: .4em;
-            border-radius: 10px;
-            box-shadow: 4px 4px 3px 3px #aaa;
-            max-width: 20em;
-
-            &.Anfahrt {
-                background-color: #bdbdbd;
-            }
-
-            &.Abfahrt {
-                background-color: #6e6e6e;
-            }
-
-            &.frei {
-                background-color: #32cd32;
-            }
-
-            &.abw {
-                background-color: #69f;
-            }
-
-            &.abw-No-Tel {
-                background-color: red;
-                color: white;
-            }
-
-            &.Call {
-                background-color: #ff0;
-            }
-
-            &.Call-No-Tel {
-                background-color: $kpcRot;
-                color: white;
-            }
-
-            &.Urlaub-krank {
-                background-color: white;
-            }
-
-            &.L1 {
-                background-color: #32a5d1;
-            }
-
-            &.L2 {
-                background-color: #aef387;
-            }
-        }
+.container--boxes .box {
+    margin: .4em;
+    padding: .4em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px 3px #aaa;
+    max-width: 20em;
+    &.Anfahrt {
+        background-color: $Anfahrt;
+    }
+    &.Abfahrt {
+        background-color: $Abfahrt;
+    }
+    &.frei {
+        background-color: $frei;
+    }
+    &.abw {
+        background-color: $abw;
+    }
+    &.abw-No-Tel {
+        background-color: $abw-No-Tel;
+        color: white;
+    }
+    &.Call {
+        background-color: $Call;
+    }
+    &.Call-No-Tel {
+        background-color: $Call-No-Tel;
+        color: white;
+    }
+    &.Urlaub-krank {
+        background-color: $Urlaub-krank;
+    }
+    &.L1 {
+        background-color: $L1;
+    }
+    &.L2 {
+        background-color: $L2;
     }
 }

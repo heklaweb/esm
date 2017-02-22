@@ -10,6 +10,7 @@ class ProcessData {
         var technikerContainer = document.getElementById("techniker");
         var level1Container = document.getElementById("level1");
         var level2Container = document.getElementById("level2");
+        var legendeContainer = document.getElementById("legende");
         var htmlString = "";
 
         for (var i = 0; i < data.length; i++) {
@@ -27,7 +28,7 @@ class ProcessData {
                 }
             } else {
                 switch (kategorie) {
-                    case 'TE':
+                    case 'TE', 'LE':
                         subclass = ' Urlaub-krank';
                         break;
                     case 'L1':
@@ -57,6 +58,9 @@ class ProcessData {
                     break;
                 case 'L2':
                     level2Container.insertAdjacentHTML('beforeend', htmlString);
+                    break;
+                case 'LE':
+                    legendeContainer.insertAdjacentHTML('beforeend', htmlString);
                     break;
                 default:
                     console.log("Kategorie ist nicht definiert: " + kategorie);

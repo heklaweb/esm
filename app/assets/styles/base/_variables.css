@@ -1,3 +1,6 @@
+/* Eigene Variablen
+   ========================================================================== */
+
 $mainBackground: #a9d0f5;
 $kpcRot: rgb(170,0,62);
 $kpcBlau: #002440;
@@ -9,3 +12,18 @@ $kpcBlau4: RGB(189, 199, 217); /* K&P Blau 4 */
 $kpcBlau5: RGB(220, 226, 236); /* K&P Blau 5 */
 
 $transparentBG: rgba(255, 255, 255, .6);
+
+/* Farben für die Boxen
+   ========================================================================== */
+
+$Anfahrt: #bdbdbd;
+$Abfahrt: #6e6e6e;
+$frei: #32cd32;
+$abw: #69f;
+$abw-No-Tel: red;
+$Call: #ff0;
+$Call-No-Tel $kpcRot;
+$Urlaub-krank: white;
+
+$L1: #32a5d1;
+$L2: #aef387;
