@@ -1,0 +1,172 @@
+[{
+    "kategorie": "TE",
+    "class": "Anfahrt",
+    "id": "ID1",
+    "name": "Jesse",
+    "vorname": "Brown",
+    "bemerkung": "Anfahrt"
+  }, {
+    "kategorie": "TE",
+    "class": "frei",
+    "id": "ID2",
+    "name": "Ernest",
+    "vorname": "Armstrong",
+    "bemerkung": "... ist frei"
+  }, {
+    "kategorie": "TE",
+    "id": "ID3",
+    "class": "Call-No-Tel",
+    "name": "Juan",
+    "vorname": "Rodriguez",
+    "bemerkung": "Call, keine Telefonate"
+  }, {
+    "kategorie": "TE",
+    "class": "abw-No-Tel",
+    "id": "ID4",
+    "name": "Nicholas",
+    "vorname": "Taylor",
+    "bemerkung": "abwesend, keine Telefonate"
+  }, {
+    "kategorie": "TE",
+    "class": "Abfahrt",
+    "id": "ID5",
+    "name": "David",
+    "vorname": "Snyder",
+    "bemerkung": "Abfahrt"
+  }, {
+    "kategorie": "TE",
+    "class": "abw",
+    "id": "ID6",
+    "name": "Terry",
+    "vorname": "Hughes",
+    "bemerkung": "abwesend, kann telefonieren"
+  }, {
+    "kategorie": "TE",
+    "class": "Call",
+    "id": "ID7",
+    "name": "Billy",
+    "vorname": "Williams",
+    "bemerkung": "Call, erreichbar"
+  }, {
+    "kategorie": "TE",
+    "class": "Urlaub-krank",
+    "id": "ID8",
+    "name": "Kimberly",
+    "vorname": "Garcia",
+    "bemerkung": "Ist im Urlaub oder krank"
+  }, {
+    "kategorie": "TE",
+    "id": "ID9",
+    "name": "Helen",
+    "vorname": "Williamson",
+    "bemerkung": "Technical Writer"
+  }, {
+    "kategorie": "TE",
+    "id": "ID10",
+    "name": "Debra",
+    "vorname": "King",
+    "bemerkung": "Sie ist ne Powerfrau, die alle Tricks kennt. In Communication Fonds Consulting Multimanagement ist sie Main Assistant Chief Controlling Analyst. Ich hab bis heut noch nicht verstanden, was das ist."
+  }, {
+    "kategorie": "TE",
+    "id": "ID11",
+    "name": "Marilyn",
+    "vorname": "Murray",
+    "bemerkung": "Research Assistant I"
+  }, {
+    "kategorie": "TE",
+    "id": "ID12",
+    "name": "Teresa",
+    "vorname": "Price",
+    "bemerkung": "Safety Technician IV"
+  }, {
+    "kategorie": "TE",
+    "id": "ID13",
+    "name": "Willie",
+    "vorname": "Willis",
+    "bemerkung": "Dental Hygienist"
+  }, {
+    "kategorie": "TE",
+    "id": "ID14",
+    "name": "Jimmy",
+    "vorname": "Campbell",
+    "bemerkung": "Health Coach IV"
+  }, {
+    "kategorie": "TE",
+    "id": "ID15",
+    "name": "Ruby",
+    "vorname": "Rogers",
+    "bemerkung": "Nurse"
+  }, {
+    "kategorie": "L1",
+    "id": "ID16",
+    "name": "Elizabeth",
+    "vorname": "Garrett",
+    "bemerkung": "Hat aktuell nichts zu tun"
+  }, {
+    "kategorie": "L1",
+    "id": "ID17",
+    "name": "Louis",
+    "vorname": "Hawkins",
+    "bemerkung": "Betreut 2 Calls"
+  }, {
+    "kategorie": "L1",
+    "id": "ID18",
+    "name": "Kevin",
+    "vorname": "Bryant",
+    "bemerkung": "Ist noch 1h verfügbar"
+  }, {
+    "kategorie": "L2",
+    "id": "ID19",
+    "name": "Laura",
+    "vorname": "Rice",
+    "bemerkung": "Weiß nicht, was er mit all seiner vielen Zeit anfangen soll und langweilt sich beinahe zu Tode ..."
+  }, {
+    "kategorie": "L2",
+    "id": "ID20",
+    "name": "Jimmy",
+    "vorname": "Clark",
+    "bemerkung": "Ist gerade voll im Stress ..."
+  },
+
+  {
+    "kategorie": "LE",
+    "class": "Call",
+    "id": "Call",
+    "bemerkung": "Techniker ist bei einem Call und erreichbar"
+  }, {
+    "kategorie": "LE",
+    "class": "Urlaub-krank",
+    "id": "Urlaub/krank, nicht erreichbar",
+    "bemerkung": "Techniker hat Urlaub oder ist krank und daher NICHT erreichbar"
+  }, {
+    "kategorie": "LE",
+    "id": "Call, keine Telefonate",
+    "class": "Call-No-Tel",
+    "bemerkung": "Techniker ist bei einem Call und möchte KEINE Telefonate"
+  }, {
+    "kategorie": "LE",
+    "class": "abw-No-Tel",
+    "id": "Abwesend, keine Telefonate",
+    "bemerkung": "Techniker ist abwesend und möchte KEINE Telefonate"
+  }, {
+    "kategorie": "LE",
+    "class": "abw",
+    "id": "Abwesend",
+    "bemerkung": "Techniker ist abwesend, kann aber telefonieren"
+  }, {
+    "kategorie": "LE",
+    "class": "frei",
+    "id": "Frei",
+    "bemerkung": "Techniker ist frei"
+  }, {
+    "kategorie": "LE",
+    "class": "Anfahrt",
+    "id": "Anfahrt",
+    "bemerkung": "Techniker sitzt im Auto (Anfahrt)"
+  }, {
+    "kategorie": "LE",
+    "class": "Abfahrt",
+    "id": "Abfahrt",
+    "bemerkung": "Techniker sitzt im Auto (Abfahrt)"
+  }
+]
