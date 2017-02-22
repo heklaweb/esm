@@ -129,32 +129,32 @@
   },
 
   {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "Call",
     "id": "Call",
     "bemerkung": "Techniker ist bei einem Call und erreichbar"
   }, {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "Urlaub-krank",
-    "id": "Urlaub/krank",
+    "id": "Urlaub/krank, nicht erreichbar",
     "bemerkung": "Techniker hat Urlaub oder ist krank und daher NICHT erreichbar"
   }, {
-    "kategorie": "TE",
-    "id": "Call-No-Tel",
+    "kategorie": "LE",
+    "id": "Call, keine Telefonate",
     "class": "Call-No-Tel",
-    "bemerkung": "Call, keine Telefonate"
+    "bemerkung": "Techniker ist bei einem Call und möchte KEINE Telefonate"
   }, {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "abw-No-Tel",
-    "id": "abwesend-No-Tel",
+    "id": "abwesend, keine Telefonate",
     "bemerkung": "Techniker ist abwesend und möchte KEINE Telefonate"
   }, {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "abw",
     "id": "abwesend",
     "bemerkung": "Techniker ist abwesend, kann aber telefonieren"
   }, {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "frei",
     "id": "Frei",
     "bemerkung": "Techniker ist frei"
@@ -164,7 +164,7 @@
     "id": "Anfahrt",
     "bemerkung": "Techniker sitzt im Auto (Anfahrt)"
   }, {
-    "kategorie": "TE",
+    "kategorie": "LE",
     "class": "Abfahrt",
     "id": "Abfahrt",
     "bemerkung": "Techniker sitzt im Auto (Abfahrt)"
