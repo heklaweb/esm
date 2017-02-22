@@ -68,7 +68,8 @@
 /************************************************************************/
 /******/ ([
 /* 0 */,
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,7 +319,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(window, document);
 
 /***/ }),
-/* 2 */,
 /* 3 */
 /***/ (function(module, exports) {
 
@@ -2573,7 +2573,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 "use strict";
 
 
-__webpack_require__(1);
+__webpack_require__(2);
 
 __webpack_require__(4);
 

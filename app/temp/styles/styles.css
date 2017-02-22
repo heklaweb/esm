@@ -460,6 +460,16 @@ template {
   display: none;
 }
 
+/* K&P Blau 1 */
+
+/* K&P Blau 2 */
+
+/* K&P Blau 3 */
+
+/* K&P Blau 4 */
+
+/* K&P Blau 5 */
+
 /* Eigene Styles
    ========================================================================== */
 
@@ -610,15 +620,15 @@ a {
 }
 
 .container {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
 }
 
 .container h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: .2rem;
   padding-top: .2rem;
 }
@@ -633,15 +643,15 @@ a {
 }
 
 .container--techniker {
-  background-color: #8aeba1;
+  background-color: #8aeba1;/*background-color: $kpcBlau1;*/
 }
 
 .container--level1 {
-  background-color: #00ffe0;
+  background-color: #00ffe0;/*background-color: $kpcBlau2;*/
 }
 
 .container--level2 {
-  background-color:#59eb59;
+  background-color:#59eb59;/*background-color: $kpcBlau3;*/
 }
 
 .container--boxes {
@@ -651,19 +661,17 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: 1px dotted #000;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
+  padding-right: .5em;
+  padding-bottom: .3em;
   margin: 0;
 }
 
 .container--boxes .box {
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  padding: 5px;
+  margin: .4em;
+  padding: .4em;
   border-radius: 10px;
   box-shadow: 4px 4px 3px 3px #aaa;
+  max-width: 20em;
 }
 
 .container--boxes .box.Anfahrt {
