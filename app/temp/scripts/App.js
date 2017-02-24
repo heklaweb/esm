@@ -63,104 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// import $ from 'jquery';
-
-var ProcessData = function () {
-    function ProcessData() {
-        _classCallCheck(this, ProcessData);
-    }
-
-    _createClass(ProcessData, [{
-        key: "renderData",
-        value: function renderData(data) {
-            // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
-            console.log('... und werden nun verarbeitet ...');
-            var technikerContainer = document.getElementById("techniker");
-            var level1Container = document.getElementById("level1");
-            var level2Container = document.getElementById("level2");
-            var legendeContainer = document.getElementById("legende");
-            var htmlString = "";
-
-            for (var i = 0; i < data.length; i++) {
-                var kategorie = data[i].kategorie;
-                var classname = data[i].class;
-                var subclass = '';
-                var id = data[i].id;
-                var name = data[i].name;
-                var vorname = data[i].vorname;
-                var bemerkung = data[i].bemerkung;
-
-                if (classname) {
-                    if (classname.length > 0) {
-                        subclass += ' ' + classname;
-                    }
-                } else {
-                    switch (kategorie) {
-                        case 'TE':
-                        case 'LE':
-                            subclass = ' Urlaub-krank';
-                            break;
-                        case 'L1':
-                            subclass = ' L1';
-                            break;
-                        case 'L2':
-                            subclass = ' L2';
-                            break;
-                    }
-                }
-
-                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>' + '<p>'
-                // + name + ' ' + vorname + '<br>'
-                + bemerkung + '</p>';
-
-                htmlString += '</div>';
-
-                switch (kategorie) {
-                    case 'TE':
-                        technikerContainer.insertAdjacentHTML('beforeend', htmlString);
-                        break;
-                    case 'L1':
-                        level1Container.insertAdjacentHTML('beforeend', htmlString);
-                        break;
-                    case 'L2':
-                        level2Container.insertAdjacentHTML('beforeend', htmlString);
-                        break;
-                    case 'LE':
-                        legendeContainer.insertAdjacentHTML('beforeend', htmlString);
-                        break;
-                    default:
-                        console.log("Kategorie ist nicht definiert: " + kategorie);
-                }
-                htmlString = "";
-            }
-        }
-    }]);
-
-    return ProcessData;
-}();
-
-exports.default = ProcessData;
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10387,6 +10294,113 @@ return jQuery;
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// import $ from 'jquery';
+
+var ProcessData = function () {
+    function ProcessData() {
+        _classCallCheck(this, ProcessData);
+    }
+
+    _createClass(ProcessData, [{
+        key: "renderData",
+        value: function renderData(data) {
+            // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
+            console.log('... und werden nun verarbeitet ...');
+            var technikerContainer = document.getElementById("techniker");
+            var level1Container = document.getElementById("level1");
+            var level2Container = document.getElementById("level2");
+            var legendeContainer = document.getElementById("legende");
+            var htmlString = "";
+
+            for (var i = 0; i < data.length; i++) {
+                var kategorie = data[i].kategorie;
+                var classname = data[i].class;
+                var subclass = '';
+                var id = data[i].id;
+                var name = data[i].name;
+                var vorname = data[i].vorname;
+                var bemerkung = data[i].bemerkung;
+
+                if (classname) {
+                    if (classname.length > 0) {
+                        subclass += ' ' + classname;
+                    }
+                } else {
+                    switch (kategorie) {
+                        case 'TE':
+                        case 'LE':
+                            subclass = ' Urlaub-krank';
+                            break;
+                        case 'L1':
+                            subclass = ' L1';
+                            break;
+                        case 'L2':
+                            subclass = ' L2';
+                            break;
+                    }
+                }
+
+                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>' + '<p>'
+                // + name + ' ' + vorname + '<br>'
+                + bemerkung + '</p>';
+
+                htmlString += '</div>';
+
+                switch (kategorie) {
+                    case 'TE':
+                        technikerContainer.insertAdjacentHTML('beforeend', htmlString);
+                        break;
+                    case 'L1':
+                        level1Container.insertAdjacentHTML('beforeend', htmlString);
+                        break;
+                    case 'L2':
+                        level2Container.insertAdjacentHTML('beforeend', htmlString);
+                        break;
+                    case 'LE':
+                        legendeContainer.insertAdjacentHTML('beforeend', htmlString);
+                        break;
+                    default:
+                        console.log("Kategorie ist nicht definiert: " + kategorie);
+                }
+                htmlString = "";
+            }
+
+            var container = document.getElementsByClassName("container");
+            // console.log("container: " + container.length);
+            setTimeout(function () {/* Look mah! No name! */}, 1000);
+            for (var i = 0; i < container.length; i++) {
+                // console.log("container: " + i + container[i]);
+                container[i].classList.toggle("visible");
+                // console.log("container" + i + ".classList: " + container[i].classList);
+            }
+
+            var container = document.getElementById("login");
+            // console.log("container" + i + ".classList: " + container.classList);
+            container.classList.add("invisible");
+            // console.log("container" + i + ".classList: " + container.classList);
+        }
+    }]);
+
+    return ProcessData;
+}();
+
+exports.default = ProcessData;
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10399,7 +10413,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _ProcessData = __webpack_require__(0);
+var _ProcessData = __webpack_require__(1);
 
 var _ProcessData2 = _interopRequireDefault(_ProcessData);
 
@@ -10417,6 +10431,7 @@ var GetData = function () {
     _createClass(GetData, [{
         key: 'get',
         value: function get() {
+            // console.log("getData.get()");
             var ourRequest = new XMLHttpRequest();
             // var dataUrl = 'https://gist.githubusercontent.com/heklaweb/16fd7c7bdc427c4bd8ca0877057559d7/raw/1b3784616845184107b304c4ce535ed322e84ee8/data.json'
             var dataUrl = 'https://raw.githubusercontent.com/heklaweb/esm/master/app/assets/data/data.json';
@@ -10451,7 +10466,116 @@ exports.default = GetData;
 "use strict";
 
 
-var _jquery = __webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// import GetData from "../modules/GetData";
+
+var Login = function () {
+    function Login() {
+        // this.login();
+
+        _classCallCheck(this, Login);
+    }
+
+    _createClass(Login, [{
+        key: "login",
+        value: function login() {
+            console.log("Login.js ---");
+            // new GetData().get();
+            // getData().get();
+        }
+    }]);
+
+    return Login;
+}();
+
+exports.default = Login;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+    function Modal() {
+        _classCallCheck(this, Modal);
+
+        this.openModalButton = (0, _jquery2.default)(".open-modal");
+        this.modal = (0, _jquery2.default)(".modal");
+        this.closeModalButton = (0, _jquery2.default)(".modal__close");
+        this.events();
+    }
+
+    _createClass(Modal, [{
+        key: "events",
+        value: function events() {
+            // clicking the open modal button
+            this.openModalButton.click(this.openModal.bind(this));
+
+            // clicking the x close modal button
+            this.closeModalButton.click(this.closeModal.bind(this));
+
+            // any key pressed
+            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+        }
+    }, {
+        key: "keyPressHandler",
+        value: function keyPressHandler(e) {
+            if (e.keyCode == 27) {
+                /* esc key pressed */
+                this.closeModal();
+            }
+        }
+    }, {
+        key: "openModal",
+        value: function openModal() {
+            console.log("openModal ...");
+            this.modal.addClass("modal--is-visible");
+            return false; // verhindert, dass zum Anfang der Seite gescrollt wird
+        }
+    }, {
+        key: "closeModal",
+        value: function closeModal() {
+            console.log("closeModal ...");
+            this.modal.removeClass("modal--is-visible");
+        }
+    }]);
+
+    return Modal;
+}();
+
+exports.default = Modal;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -10483,22 +10607,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ }),
-/* 4 */,
-/* 5 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jquery = __webpack_require__(1);
+var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _SetContentHeight = __webpack_require__(3);
+var _SetContentHeight = __webpack_require__(5);
 
 var _SetContentHeight2 = _interopRequireDefault(_SetContentHeight);
 
-var _ProcessData = __webpack_require__(0);
+var _ProcessData = __webpack_require__(1);
 
 var _ProcessData2 = _interopRequireDefault(_ProcessData);
 
@@ -10506,11 +10630,21 @@ var _GetData = __webpack_require__(2);
 
 var _GetData2 = _interopRequireDefault(_GetData);
 
+var _Modal = __webpack_require__(4);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+var _Login = __webpack_require__(3);
+
+var _Login2 = _interopRequireDefault(_Login);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import AddLegende from "./modules/AddLegende";
 
-new _GetData2.default();
+// var myLogin = new Login();
+var getData = new _GetData2.default();
+var modal = new _Modal2.default();
 
 /***/ })
 /******/ ]);

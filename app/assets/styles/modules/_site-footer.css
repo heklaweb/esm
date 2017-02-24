@@ -1,5 +1,5 @@
 .site-footer {
-    font-size: .75rem;
+    font-size: .75em;
     font-weight: 200;
     color: #FFF;
     text-align: center;
@@ -12,7 +12,7 @@
     /*border: 1px solid #000;*/
 
     @mixin atMedium {
-        font-size: 1rem;
+        font-size: 1em;
     }
 
 }

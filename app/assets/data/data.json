@@ -101,7 +101,7 @@
     "id": "ID16",
     "name": "Elizabeth",
     "vorname": "Garrett",
-    "bemerkung": "Hat aktuell nichts zu tun"
+    "bemerkung": "Weiß nicht, was er mit all seiner vielen Zeit anfangen soll und langweilt sich beinahe zu Tode ..."
   }, {
     "kategorie": "L1",
     "id": "ID17",
@@ -117,12 +117,6 @@
   }, {
     "kategorie": "L2",
     "id": "ID19",
-    "name": "Laura",
-    "vorname": "Rice",
-    "bemerkung": "Weiß nicht, was er mit all seiner vielen Zeit anfangen soll und langweilt sich beinahe zu Tode ..."
-  }, {
-    "kategorie": "L2",
-    "id": "ID20",
     "name": "Jimmy",
     "vorname": "Clark",
     "bemerkung": "Ist gerade voll im Stress ..."

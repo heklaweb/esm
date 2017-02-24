@@ -1,6 +1,5 @@
 .site-content {
+    width: 100%;
     position: absolute;
     overflow: auto;
-    /*background-color: yellow;*/
-    /*border-bottom: 1px solid #f00;*/
 }

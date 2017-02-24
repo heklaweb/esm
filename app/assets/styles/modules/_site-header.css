@@ -1,11 +1,26 @@
 .site-header {
     background-color: $kpcRot;
     width: 100%;
+    display: flex;
+    /*vertical-align: middle;*/
+    padding: 0.3rem 0.5rem .3rem 0.5rem;
+    box-shadow: 7px 7px 5px -2px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 2px 9px 1px rgba(0, 0, 0, 0.12),
+        0 4px 2px -2px rgba(0, 0, 0, 0.2);*/
+
 
     &__title {
         color: #FFF;
-        padding: 0.5rem;
         margin: 0;
         font-weight: 400;
+        /*font-size: 1.5em;*/
+        flex: 1;
+        vertical-align: middle;
+
+        @mixin atMedium {
+            font-size: 2em;
+        }
     }
+
 }

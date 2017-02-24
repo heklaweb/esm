@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 4:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78,7 +78,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /*!
  * modernizr v3.3.1
- * Build http://modernizr.com/download?-svg-setclasses-dontmin
+ * Build http://modernizr.com/download?-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -296,30 +296,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   }
 
   ;
-  /*!
-  {
-    "name": "SVG",
-    "property": "svg",
-    "caniuse": "svg",
-    "tags": ["svg"],
-    "authors": ["Erik Dahlstrom"],
-    "polyfills": [
-      "svgweb",
-      "raphael",
-      "amplesdk",
-      "canvg",
-      "svg-boilerplate",
-      "sie",
-      "dojogfx",
-      "fabricjs"
-    ]
-  }
-  !*/
-  /* DOC
-  Detects support for SVG in `<embed>` or `<object>` elements.
-  */
-
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
   // Run each test
   testRunner();
@@ -343,13 +319,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 6:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(4);
+__webpack_require__(6);
 
 /***/ })
 

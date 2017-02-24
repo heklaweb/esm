@@ -40,12 +40,13 @@ class ProcessData {
                 }
             }
 
-            htmlString += '<div class="box' + subclass + '">'
-                + '<h4>' + id + '</h4>'
-                + '<p>'
+            htmlString += '<div class="box' + subclass + '">' +
+                '<h4>' + id + '</h4>' +
+                '<p>'
                 // + name + ' ' + vorname + '<br>'
-                + bemerkung
-                + '</p>';
+                +
+                bemerkung +
+                '</p>';
 
             htmlString += '</div>';
 
@@ -69,6 +70,19 @@ class ProcessData {
 
         }
 
+        var container = document.getElementsByClassName("container");
+        // console.log("container: " + container.length);
+        setTimeout(function(){/* Look mah! No name! */}, 1000);
+        for (var i = 0; i < container.length; i++) {
+            // console.log("container: " + i + container[i]);
+            container[i].classList.toggle("visible");
+            // console.log("container" + i + ".classList: " + container[i].classList);
+        }
+
+        var container = document.getElementById("login");
+        // console.log("container" + i + ".classList: " + container.classList);
+        container.classList.add("invisible");
+        // console.log("container" + i + ".classList: " + container.classList);
     }
 }
 
