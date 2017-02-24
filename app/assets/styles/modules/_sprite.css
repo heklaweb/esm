@@ -1,0 +1,22 @@
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+    .icon {
+      background-image: url('../../assets/images/sprites/sprite-66f78590.svg');
+    }
+
+    .no-svg .icon {
+      background-image: url('../../assets/images/sprites/sprite-66f78590.png');
+    }
+
+  .icon--Logo {
+    width: 158px;
+    height: 125px;
+    background-position: 0 0;
+  }
+
+  .icon--pyramide {
+    width: 71.25px;
+    height: 56.25px;
+    background-position: 99.5275590551181% 0;
+  }
