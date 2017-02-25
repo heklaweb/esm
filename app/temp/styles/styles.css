@@ -661,10 +661,11 @@ a {
   background-color: lightseagreen;
   margin-top: 3em;
   font-size: .9em;
+  overflow: auto;
 }
 
 .container--login {
-  background-color: yellow;
+  background-color: RGB(17, 71, 106);
   padding: 3rem 0;
   text-align: center;
 }

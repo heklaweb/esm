@@ -2,7 +2,7 @@ import ProcessData from "../modules/ProcessData";
 
 class GetData {
     constructor() {
-        this.get();
+        //this.get();
     }
 
     get() {

@@ -6,6 +6,14 @@ import Modal from "./modules/Modal";
 // import Login from "./modules/Login";
 // import AddLegende from "./modules/AddLegende";
 
-// var myLogin = new Login();
-var getData = new GetData();
+// var getData = new GetData();
 var modal = new Modal();
+
+var btnLogin = document.getElementById("btnLogin");
+btnLogin.addEventListener("click", function() {
+	// console.log("Anmeldung wird geprüft ...");
+	// In Zukunft hier zunächst Authentifizierung und Authorisierung durchführen
+	// Wenn diese erfolgreich sind, Daten laden und anzeigen
+	// console.log("Anmeldung war erfolgreich ...");
+	new GetData().get();
+});

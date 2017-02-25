@@ -10423,9 +10423,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var GetData = function () {
     function GetData() {
-        _classCallCheck(this, GetData);
+        //this.get();
 
-        this.get();
+        _classCallCheck(this, GetData);
     }
 
     _createClass(GetData, [{
@@ -10601,9 +10601,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import Login from "./modules/Login";
 // import AddLegende from "./modules/AddLegende";
 
-// var myLogin = new Login();
-var getData = new _GetData2.default();
+// var getData = new GetData();
 var modal = new _Modal2.default();
+
+var btnLogin = document.getElementById("btnLogin");
+btnLogin.addEventListener("click", function () {
+	// console.log("Anmeldung wird geprüft ...");
+	// In Zukunft hier zunächst Authentifizierung und Authorisierung durchführen
+	// Wenn diese erfolgreich sind, Daten laden und anzeigen
+	// console.log("Anmeldung war erfolgreich ...");
+	new _GetData2.default().get();
+});
 
 /***/ })
 /******/ ]);
