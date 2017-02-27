@@ -15,7 +15,8 @@ class GetData {
             if (ourRequest.status >= 200 && ourRequest.status < 400) {
                 var ourData = JSON.parse(ourRequest.responseText);
                 console.log('Die Daten wurden erfolgreich geladen ...');
-                new ProcessData().renderData(ourData);
+                new ProcessData(true).renderData(ourData);
+                // new ProcessData(false).renderData(ourData);
             } else {
                 console.log("We connected to the server, but it returned an error.");
             }

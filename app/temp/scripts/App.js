@@ -10311,8 +10311,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // import $ from 'jquery';
 
 var ProcessData = function () {
-    function ProcessData() {
+    function ProcessData(withDetails) {
         _classCallCheck(this, ProcessData);
+
+        this.detailed = withDetails;
     }
 
     _createClass(ProcessData, [{
@@ -10354,9 +10356,13 @@ var ProcessData = function () {
                     }
                 }
 
-                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>' + '<p>'
-                // + name + ' ' + vorname + '<br>'
-                + bemerkung + '</p>';
+                htmlString += '<div class="box' + subclass + '">' + '<h4>' + id + '</h4>';
+
+                if (this.detailed) {
+                    htmlString += '<p>'
+                    // + name + ' ' + vorname + '<br>'
+                    + bemerkung + '</p>';
+                }
 
                 htmlString += '</div>';
 
@@ -10379,9 +10385,17 @@ var ProcessData = function () {
                 htmlString = "";
             }
 
+            this.toggleLoginAndData();
+        }
+
+        // Login-Container aus- und Daten-Container einblenden
+
+    }, {
+        key: "toggleLoginAndData",
+        value: function toggleLoginAndData() {
+
             var container = document.getElementsByClassName("container");
             // console.log("container: " + container.length);
-            setTimeout(function () {/* Look mah! No name! */}, 1000);
             for (var i = 0; i < container.length; i++) {
                 // console.log("container: " + i + container[i] + ": " + container[i].className);
                 container[i].classList.toggle("visible");
@@ -10392,6 +10406,11 @@ var ProcessData = function () {
             // console.log("container" + i + ".classList: " + container.classList);
             container.classList.add("invisible");
             // console.log("container" + i + ".classList: " + container.classList);
+
+            // Button zum Einblenden der Legende sichtbar machen
+            // var legendeButton = document.getElementById("btn-legende");
+            // legendeButton.classList.add("toggle-btn-visible");
+            // console.log("legendeButton" + i + ".classList: " + legendeButton.classList);
         }
     }]);
 
@@ -10440,7 +10459,8 @@ var GetData = function () {
                 if (ourRequest.status >= 200 && ourRequest.status < 400) {
                     var ourData = JSON.parse(ourRequest.responseText);
                     console.log('Die Daten wurden erfolgreich geladen ...');
-                    new _ProcessData2.default().renderData(ourData);
+                    // new ProcessData(true).renderData(ourData);
+                    new _ProcessData2.default(false).renderData(ourData);
                 } else {
                     console.log("We connected to the server, but it returned an error.");
                 }
@@ -10558,6 +10578,7 @@ var _jqueryDeclarativeToggleMin2 = _interopRequireDefault(_jqueryDeclarativeTogg
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Modal from "./modules/Modal";
 // import Login from "./modules/Login";
 
 // var getData = new GetData();
@@ -10565,8 +10586,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 var btnLogin = document.getElementById("btnLogin");
-// import Modal from "./modules/Modal";
-
 btnLogin.addEventListener("click", function () {
 	// console.log("Anmeldung wird geprüft ...");
 	// In Zukunft hier zunächst Authentifizierung und Authorisierung durchführen

@@ -20,18 +20,23 @@
     <h1 class="site-header__title">Einsatzmonitor</h1>
     <div class="menu">
       <h1 class="site-header__title">
-        <a href="#" class="btn btn--blau toggle-btn-visible"
-        data-toggle-target="#legende" data-toggle-text"read="" less"="x">?</a></h1>
+        <!--<a href="#" class="btn btn--blau toggle-btn-visible"
+        data-toggle-target="#legende"
+        data-toggle-text="x">?</a>-->
+        <a href="#" id="btn-legende"
+          class="btn btn--blau"
+          data-toggle-target="#legende">?</a>
+      </h1>
       <!--<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
     <button id="butMenu" class="headerButton" aria-label="Menu"></button>-->
     </div>
   </header>
   <section class="site-content">
     <div class="container container--legende" id="legende">
-        <h3>Legende</h3>
-        <div class="container--boxes" id="data-legende">
-        </div>
+      <h3>Legende</h3>
+      <div class="container--boxes" id="data-legende">
       </div>
+    </div>
     <div class="container container--techniker" id="techniker">
       <h3>Techniker</h3>
       <div class="container--boxes" id="data-techniker">
@@ -68,12 +73,6 @@
   <!-- build:js assets/scripts/App.js -->
   <script src='/temp/scripts/App.js'></script>
   <!-- endbuild -->
-  <script>
-    function anmelden() {
-      console.log("Anmelden ...");
-      // getData().get();
-    }
-  </script>
 
 </body>
 

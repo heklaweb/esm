@@ -1,7 +1,9 @@
 // import $ from 'jquery';
 
 class ProcessData {
-    constructor() {}
+    constructor(withDetails) {
+        this.detailed = withDetails;
+    }
 
     renderData(data) {
         // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
@@ -41,12 +43,14 @@ class ProcessData {
             }
 
             htmlString += '<div class="box' + subclass + '">' +
-                '<h4>' + id + '</h4>' +
-                '<p>'
-                // + name + ' ' + vorname + '<br>'
-                +
-                bemerkung +
-                '</p>';
+                '<h4>' + id + '</h4>';
+
+            if (this.detailed) {
+                htmlString += '<p>'
+                    // + name + ' ' + vorname + '<br>'
+                    + bemerkung
+                    + '</p>';
+            }
 
             htmlString += '</div>';
 
@@ -70,9 +74,14 @@ class ProcessData {
 
         }
 
+        this.toggleLoginAndData();
+    }
+
+    // Login-Container aus- und Daten-Container einblenden
+    toggleLoginAndData() {
+
         var container = document.getElementsByClassName("container");
         // console.log("container: " + container.length);
-        setTimeout(function(){/* Look mah! No name! */}, 1000);
         for (var i = 0; i < container.length; i++) {
             // console.log("container: " + i + container[i] + ": " + container[i].className);
             container[i].classList.toggle("visible");
@@ -83,7 +92,13 @@ class ProcessData {
         // console.log("container" + i + ".classList: " + container.classList);
         container.classList.add("invisible");
         // console.log("container" + i + ".classList: " + container.classList);
+
+        // Button zum Einblenden der Legende sichtbar machen
+        // var legendeButton = document.getElementById("btn-legende");
+        // legendeButton.classList.add("toggle-btn-visible");
+        // console.log("legendeButton" + i + ".classList: " + legendeButton.classList);
     }
+
 }
 
 export default ProcessData;
