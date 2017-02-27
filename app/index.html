@@ -19,35 +19,33 @@
   <header class="site-header">
     <h1 class="site-header__title">Einsatzmonitor</h1>
     <div class="menu">
-      <h1 class="site-header__title"><a href="#" class="btn btn--blau open-modal">?</a></h1>
+      <h1 class="site-header__title">
+        <a href="#" class="btn btn--blau toggle-btn-visible"
+        data-toggle-target="#legende" data-toggle-text"read="" less"="x">?</a></h1>
       <!--<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
     <button id="butMenu" class="headerButton" aria-label="Menu"></button>-->
     </div>
   </header>
   <section class="site-content">
-    <div class="container container--techniker">
-      <h3>Techniker</h3>
-      <div class="container--boxes" id="techniker">
-      </div>
-    </div>
-    <div class="container container--level1">
-      <h3>L1</h3>
-      <div class="container--boxes" id="level1">
-      </div>
-    </div>
-    <div class="container container--level2">
-      <h3>L2</h3>
-      <div class="container--boxes" id="level2">
-      </div>
-    </div>
-
-    <div class="modal">
-      <div class="container container--legende">
+    <div class="container container--legende" id="legende">
         <h3>Legende</h3>
-        <div class="container--boxes" id="legende">
+        <div class="container--boxes" id="data-legende">
         </div>
       </div>
-      <div class="modal__close">X</div>
+    <div class="container container--techniker" id="techniker">
+      <h3>Techniker</h3>
+      <div class="container--boxes" id="data-techniker">
+      </div>
+    </div>
+    <div class="container container--level1" id="level1">
+      <h3>L1</h3>
+      <div class="container--boxes" id="data-level1">
+      </div>
+    </div>
+    <div class="container container--level2" id="level2">
+      <h3>L2</h3>
+      <div class="container--boxes" id="data-level2">
+      </div>
     </div>
 
     <div class="container container--login visible" id="login">

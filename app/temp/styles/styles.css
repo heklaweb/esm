@@ -658,8 +658,7 @@ a {
 }
 
 .container--legende {
-  background-color: lightseagreen;
-  margin-top: 3em;
+  background-color: lightseagreen;/*margin-top: 3em;*/
   font-size: .9em;
   overflow: auto;
 }
@@ -859,6 +858,14 @@ a {
 
 .modal__close:hover {/* color: $kpcRot;*//*background-color: $kpcRot;*/
 }
+
+.toggle-btn {display: none;}
+
+.toggle-btn-visible {display: block;}
+
+.toggle-target-hidden {display: none;}
+
+.toggle-target-expanded {display: block;}
 
 /*@import "modules/_login";*/
 

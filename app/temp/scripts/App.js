@@ -10320,10 +10320,10 @@ var ProcessData = function () {
         value: function renderData(data) {
             // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
             console.log('... und werden nun verarbeitet ...');
-            var technikerContainer = document.getElementById("techniker");
-            var level1Container = document.getElementById("level1");
-            var level2Container = document.getElementById("level2");
-            var legendeContainer = document.getElementById("legende");
+            var legendeDaten = document.getElementById("data-legende");
+            var technikerDaten = document.getElementById("data-techniker");
+            var level1Daten = document.getElementById("data-level1");
+            var level2Daten = document.getElementById("data-level2");
             var htmlString = "";
 
             for (var i = 0; i < data.length; i++) {
@@ -10362,16 +10362,16 @@ var ProcessData = function () {
 
                 switch (kategorie) {
                     case 'TE':
-                        technikerContainer.insertAdjacentHTML('beforeend', htmlString);
+                        technikerDaten.insertAdjacentHTML('beforeend', htmlString);
                         break;
                     case 'L1':
-                        level1Container.insertAdjacentHTML('beforeend', htmlString);
+                        level1Daten.insertAdjacentHTML('beforeend', htmlString);
                         break;
                     case 'L2':
-                        level2Container.insertAdjacentHTML('beforeend', htmlString);
+                        level2Daten.insertAdjacentHTML('beforeend', htmlString);
                         break;
                     case 'LE':
-                        legendeContainer.insertAdjacentHTML('beforeend', htmlString);
+                        legendeDaten.insertAdjacentHTML('beforeend', htmlString);
                         break;
                     default:
                         console.log("Kategorie ist nicht definiert: " + kategorie);
@@ -10383,7 +10383,7 @@ var ProcessData = function () {
             // console.log("container: " + container.length);
             setTimeout(function () {/* Look mah! No name! */}, 1000);
             for (var i = 0; i < container.length; i++) {
-                // console.log("container: " + i + container[i]);
+                // console.log("container: " + i + container[i] + ": " + container[i].className);
                 container[i].classList.toggle("visible");
                 // console.log("container" + i + ".classList: " + container[i].classList);
             }
@@ -10466,77 +10466,6 @@ exports.default = GetData;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Modal = function () {
-    function Modal() {
-        _classCallCheck(this, Modal);
-
-        this.openModalButton = (0, _jquery2.default)(".open-modal");
-        this.modal = (0, _jquery2.default)(".modal");
-        this.closeModalButton = (0, _jquery2.default)(".modal__close");
-        this.events();
-    }
-
-    _createClass(Modal, [{
-        key: "events",
-        value: function events() {
-            // clicking the open modal button
-            this.openModalButton.click(this.openModal.bind(this));
-
-            // clicking the x close modal button
-            this.closeModalButton.click(this.closeModal.bind(this));
-
-            // any key pressed
-            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
-        }
-    }, {
-        key: "keyPressHandler",
-        value: function keyPressHandler(e) {
-            if (e.keyCode == 27) {
-                /* esc key pressed */
-                this.closeModal();
-            }
-        }
-    }, {
-        key: "openModal",
-        value: function openModal() {
-            console.log("openModal ...");
-            this.modal.addClass("modal--is-visible");
-            return false; // verhindert, dass zum Anfang der Seite gescrollt wird
-        }
-    }, {
-        key: "closeModal",
-        value: function closeModal() {
-            console.log("closeModal ...");
-            this.modal.removeClass("modal--is-visible");
-        }
-    }]);
-
-    return Modal;
-}();
-
-exports.default = Modal;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -10569,6 +10498,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)(document).ready(function () {
+  var e = function e(_e) {
+    var t = (0, _jquery2.default)(_e).text();var n = (0, _jquery2.default)(_e).attr("data-toggle-target");(0, _jquery2.default)(_e).addClass("toggle-btn-visible");(0, _jquery2.default)(n).addClass("toggle-target-hidden");(0, _jquery2.default)(_e).click(function () {
+      if ((0, _jquery2.default)(_e).text() == (0, _jquery2.default)(_e).attr("data-toggle-text")) {
+        (0, _jquery2.default)(_e).text(t);
+      } else {
+        (0, _jquery2.default)(_e).text((0, _jquery2.default)(_e).attr("data-toggle-text"));
+      }(0, _jquery2.default)(n).slideToggle(400, function () {
+        (0, _jquery2.default)(n).toggleClass("toggle-target-expanded").css("display", "");
+      });
+    });
+  };if ((0, _jquery2.default)("[data-toggle-target]").length) {
+    (0, _jquery2.default)("[data-toggle-target]").each(function () {
+      e(this);
+    });
+  }
+});
+
+/***/ }),
 /* 5 */,
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10580,7 +10540,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _SetContentHeight = __webpack_require__(4);
+var _SetContentHeight = __webpack_require__(3);
 
 var _SetContentHeight2 = _interopRequireDefault(_SetContentHeight);
 
@@ -10592,19 +10552,21 @@ var _GetData = __webpack_require__(2);
 
 var _GetData2 = _interopRequireDefault(_GetData);
 
-var _Modal = __webpack_require__(3);
+var _jqueryDeclarativeToggleMin = __webpack_require__(4);
 
-var _Modal2 = _interopRequireDefault(_Modal);
+var _jqueryDeclarativeToggleMin2 = _interopRequireDefault(_jqueryDeclarativeToggleMin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import Login from "./modules/Login";
-// import AddLegende from "./modules/AddLegende";
 
 // var getData = new GetData();
-var modal = new _Modal2.default();
+// var modal = new Modal();
+
 
 var btnLogin = document.getElementById("btnLogin");
+// import Modal from "./modules/Modal";
+
 btnLogin.addEventListener("click", function () {
 	// console.log("Anmeldung wird geprüft ...");
 	// In Zukunft hier zunächst Authentifizierung und Authorisierung durchführen

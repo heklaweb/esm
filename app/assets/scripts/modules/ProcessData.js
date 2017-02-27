@@ -6,10 +6,10 @@ class ProcessData {
     renderData(data) {
         // In Zukunft kann hierfür evtl. "Handlebars.js" verwendet werden!
         console.log('... und werden nun verarbeitet ...');
-        var technikerContainer = document.getElementById("techniker");
-        var level1Container = document.getElementById("level1");
-        var level2Container = document.getElementById("level2");
-        var legendeContainer = document.getElementById("legende");
+        var legendeDaten = document.getElementById("data-legende");
+        var technikerDaten = document.getElementById("data-techniker");
+        var level1Daten = document.getElementById("data-level1");
+        var level2Daten = document.getElementById("data-level2");
         var htmlString = "";
 
         for (var i = 0; i < data.length; i++) {
@@ -52,16 +52,16 @@ class ProcessData {
 
             switch (kategorie) {
                 case 'TE':
-                    technikerContainer.insertAdjacentHTML('beforeend', htmlString);
+                    technikerDaten.insertAdjacentHTML('beforeend', htmlString);
                     break;
                 case 'L1':
-                    level1Container.insertAdjacentHTML('beforeend', htmlString);
+                    level1Daten.insertAdjacentHTML('beforeend', htmlString);
                     break;
                 case 'L2':
-                    level2Container.insertAdjacentHTML('beforeend', htmlString);
+                    level2Daten.insertAdjacentHTML('beforeend', htmlString);
                     break;
                 case 'LE':
-                    legendeContainer.insertAdjacentHTML('beforeend', htmlString);
+                    legendeDaten.insertAdjacentHTML('beforeend', htmlString);
                     break;
                 default:
                     console.log("Kategorie ist nicht definiert: " + kategorie);
@@ -74,7 +74,7 @@ class ProcessData {
         // console.log("container: " + container.length);
         setTimeout(function(){/* Look mah! No name! */}, 1000);
         for (var i = 0; i < container.length; i++) {
-            // console.log("container: " + i + container[i]);
+            // console.log("container: " + i + container[i] + ": " + container[i].className);
             container[i].classList.toggle("visible");
             // console.log("container" + i + ".classList: " + container[i].classList);
         }

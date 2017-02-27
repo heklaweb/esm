@@ -2,12 +2,13 @@ import $ from 'jquery';
 import SetContentHeight from "./modules/SetContentHeight";
 import ProcessData from "./modules/ProcessData";
 import GetData from "./modules/GetData";
-import Modal from "./modules/Modal";
+import toggle from "./modules/jquery.declarativeToggle.min.js"
+// import Modal from "./modules/Modal";
 // import Login from "./modules/Login";
-// import AddLegende from "./modules/AddLegende";
 
 // var getData = new GetData();
-var modal = new Modal();
+// var modal = new Modal();
+
 
 var btnLogin = document.getElementById("btnLogin");
 btnLogin.addEventListener("click", function() {
